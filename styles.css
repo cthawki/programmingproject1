@@ -1,4 +1,11 @@
 p {
-  font-family: Georgia, "Times New Roman", Times,
-serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+h1.special {
+  font-style: italic;
+}
+
+.standout {
+  color: #cc0000;
 }

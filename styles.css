@@ -15,3 +15,11 @@ p {
 .standout {
   color: #cc0000;
 }
+
+/* SPACING
+*/
+
+h1 {
+  letter-spacing: 1em;
+}
+

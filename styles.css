@@ -1,0 +1,17 @@
+/* CSS SHEET
+*/
+
+
+/* Times New Roman Font
+*/
+
+p {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+/* Red Coloring on the first line
+*/
+
+.standout {
+  color: #cc0000;
+}

@@ -1,25 +1,48 @@
-/* CSS SHEET
+/*
+CSS SHEET
 */
 
 
-/* Times New Roman Font
+/*
+Times New Roman Font
 */
 
 p {
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
-/* Red Coloring on the first line
+/*
+Red Coloring on the first line
 */
 
 .standout {
   color: #cc0000;
 }
 
-/* SPACING
+/*
+Spacing
 */
 
 h1 {
   letter-spacing: 1em;
 }
 
+/*
+DIVS
+*/
+
+div#main {
+  font-size: 1.1em;
+  margin: .1em .2em .2em .2em;
+}
+
+/*TABLE BORDERS
+*/
+
+th, td {
+  border: 1px solid black;
+}
+
+table {
+  border-collapse: collapse;
+}

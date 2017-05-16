@@ -20,6 +20,27 @@ Red Coloring on the first line
 }
 
 /*
+Font size
+*/
+
+p {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1.2em;
+}
+h1 {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-size: 2em;
+}
+
+/*
+CENTER ALIGN
+*/
+
+h1 {
+  text-align: center;
+}
+
+/*
 Spacing
 */
 
@@ -36,11 +57,13 @@ div#main {
   margin: .1em .2em .2em .2em;
 }
 
-/*TABLE BORDERS
+/*TABLE
 */
 
 th, td {
   border: 1px solid black;
+  padding: 5px;
+  width: 20%;
 }
 
 table {

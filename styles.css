@@ -111,6 +111,6 @@ HEADER
 */
 
 div#header {
-  width: 100%
+  width: 100%auto;
   background-color: #990000;
 }

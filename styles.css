@@ -111,6 +111,9 @@ HEADER
 */
 
 div#header {
-  width: 100%auto;
-  background-color: #990000;
-}
+      width: 930px;
+      overflow: auto;
+      margin-left: 15px;
+      margin-right: 15px;
+      background: #ADB96E;
+  }

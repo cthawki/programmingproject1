@@ -4,7 +4,7 @@ CSS SHEET
 
 
 /*
-Times New Roman Font
+FONT TYPE
 */
 
 p {
@@ -12,7 +12,7 @@ p {
 }
 
 /*
-Red Coloring on the first line
+RED COLORING
 */
 
 .standout {
@@ -20,7 +20,7 @@ Red Coloring on the first line
 }
 
 /*
-Font size
+FONT SIZE
 */
 
 p {
@@ -41,7 +41,7 @@ h1 {
 }
 
 /*
-Spacing
+SPACING
 */
 
 h1 {
@@ -69,6 +69,10 @@ th, td {
 
 table {
   border-collapse: collapse;
+}
+
+td {
+  text-align: center;
 }
 
 
@@ -99,4 +103,26 @@ div#navbar {
 
 div#navbar ul li {
   padding: 0 1em .3em 1em;
+}
+
+
+/*
+HEADER
+*/
+
+div#header {
+  width: 100%
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #990000;
+}
+
+div#header h2 {
+  font-family: Verdana, Geneva, sans-serif;
+  font-weight: 900;
+  color: white;
+  font-size: 2em;
+  margin-left: 2%;
+  padding: 0;
 }

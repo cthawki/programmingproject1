@@ -117,3 +117,12 @@ div#header {
       left: 0;
       background-color: #990000;
   }
+
+div#header h2 {
+  font-famiy: Verdana, Geneva, sans-serif;
+  font-weight: 900;
+  color: white;
+  font-size: 2em;
+  margin-left: 2%;
+  padding: 0;
+}

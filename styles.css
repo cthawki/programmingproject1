@@ -112,5 +112,8 @@ HEADER
 
 div#header {
       width: 100%auto;
-      background-color: #ADB96E;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: #990000;
   }

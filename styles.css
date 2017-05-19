@@ -50,6 +50,14 @@ div#main {
 }
 
 /*
+MARGINS
+*/
+
+p.offset {
+  margin: 2em;
+}
+
+/*
 TABLE
 */
 

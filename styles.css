@@ -99,22 +99,24 @@ div#header h2 {
 NAVIGATION BAR
 */
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 200px;
-    background-color: #990000;
+div#navbar {
+    clear: both;
+    display: inline-block;
 }
-
-li a {
-    display: block;
-    color: #000;
-    padding: 8px 16px;
-    text-decoration: none;
+div#navbar ul {
+  list-style-type: none;
+  padding-left: 0;
 }
-
-li a:hover {
-    background-color: #555;
-    color: white;
+div#navbar ul li {
+  background-color: blue;
+  margin: 0 0 .25em 0;
+}
+div#navbar ul li a {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.1em;
+  font-weight: 900;
+  text-decoration: none;
+  color: white;
+  display: block;
+  padding: .3em;
 }

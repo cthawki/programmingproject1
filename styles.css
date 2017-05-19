@@ -2,17 +2,8 @@
 CSS SHEET
 */
 
-
 /*
-FONT TYPE
-*/
-
-p {
-  font-family: Georgia, "Times New Roman", Times, serif;
-}
-
-/*
-FONT SIZE
+FONT
 */
 
 p {
@@ -37,6 +28,10 @@ h1 {
   text-align: center;
 }
 
+h3 {
+  text-align: center;
+}
+
 /*
 SPACING
 */
@@ -45,11 +40,20 @@ h1 {
   letter-spacing: 1em;
 }
 
+h3 {
+  letter-spacing: 1em;
+}
+
 /*
 DIVS
 */
 
-div#main {
+div#about {
+  font-size: 1.1em;
+  margin: .1em .2em .2em .2em;
+}
+
+div#contact {
   font-size: 1.1em;
   margin: .1em .2em .2em .2em;
 }

@@ -62,22 +62,21 @@ div#contact {
   margin: .1em .2em .2em .2em;
 }
 
-div#photo {
-  width: 400px;
-  height: 269px;
-  background-image: url("images/baseball.jpg");
-  position: absolute;
-  left: -500px;
-  top: 250px;
+div#baseball {
+width: 150px;
+height: 150px;
+background-image: url("C:\Users\Chris Hawkins\Desktop\images\baseball.jpg");
+position: absolute;
+left: -150px;
 }
-
-div#photo h2 {
-  font-family: arial, helvetica, sans-serif;
-  font-size: 2em;
-  font-weight: bold;
-  color: white;
-  text-align: center;
-  padding: 50px 0 0 150px;
+div#baseball h2 {
+font-family: arial, helvetica, sans-serif;
+font-size: 2em;
+font-weight: bold;
+color: black;
+text-align: center;
+padding-left: 8px;
+margin-top: 10px;
 }
 
 /*

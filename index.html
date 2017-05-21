@@ -8,19 +8,20 @@
   $(function() {
     console.log("jQuery was loaded");
   });
-  function showpage(page) {
-    $("#schoolPortfolio").hide();
-    $("#socialMedia").hide();
-    $("#contactMe").hide();
 
+  function showpage(page) {
+    $("#page1").hide();
+    $("#page2").hide();
+    $("#page3").hide();
+    
     if (page === 1) {
-      $("#schoolPortfolio").show();
+      $("#page1").show();
     }
     else if (page === 2) {
-      $("#socialMedia").show();
+      $("#page2").show();
     }
     else if (page === 3) {
-      $("#contactMe").show();
+      $("#page3").show();
     }
   }
   </script>
@@ -32,13 +33,13 @@
   <a href="javascript:void(0)" onclick="showpage(1)">My School Portfolio</a> |
   <a href="javascript:void(0)" onclick="showpage(2)">My Social Medias</a> |
   <a href="javascript:void(0)" onclick="showpage(3)">My Contact Information</a>
-  <div id="schoolPortfolio">
+  <div id="page1">
     1
   </div>
-  <div id="socialMedia" style="display:none;">
+  <div id="page2" style="display:none;">
     2
   </div>
-  <div id="contactMe" style="display:none;">
+  <div id="page3" style="display:none;">
     3
   </div>
     <div id="about">

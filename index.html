@@ -23,7 +23,9 @@
       $("#page3").show();
     }
   }
-    $("div#photo").animation({left: "15%"});
+    var windowWidth = $(window).width();
+    var imageHorizOffset = ((windowWidth - 400) / 2) + "px";
+    $("div#daily").animate({left: imageHorizOffset});
   </script>
   </head>
   <body style="background-color:gray">

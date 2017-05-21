@@ -3,11 +3,44 @@
   <head>
   <title>Advanced Programming</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="jquery-3.1.1.min.js"></script>
+  <script>
+  $(function() {
+    console.log("jQuery was loaded");
+  });
+  function showpage(page) {
+    $("#schoolPortfolio").hide();
+    $("#socialMedia").hide();
+    $("#contactMe").hide();
+
+    if (page === 1) {
+      $("#schoolPortfolio").show();
+    }
+    else if (page === 2) {
+      $("#socialMedia").show();
+    }
+    else if (page === 3) {
+      $("#contactMe").show();
+    }
+  }
+  </script>
   </head>
   <body style="background-color:gray">
     <div id="header">
       <h2><b><i><center>Christopher Hawkins - Advanced Programming Homepage</center></i></b></h2>
     </div>
+  <a href="javascript:void(0)" onclick="showpage(1)">My School Portfolio</a> |
+  <a href="javascript:void(0)" onclick="showpage(2)">My Social Medias</a> |
+  <a href="javascript:void(0)" onclick="showpage(3)">My Contact Information</a>
+  <div id="schoolPortfolio">
+    1
+  </div>
+  <div id="socialMedia" style="display:none;">
+    2
+  </div>
+  <div id="contactMe" style="display:none;">
+    3
+  </div>
     <div id="about">
       <p><b><h1>ABOUT ME!</h1></b></p>
       <center>

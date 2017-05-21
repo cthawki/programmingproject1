@@ -65,7 +65,7 @@ div#contact {
 div#baseball {
 width: 150px;
 height: 150px;
-background-image: url("C:\Users\Chris Hawkins\Desktop\images\baseball.jpg");
+background-image: ("images/baseball.jpg");
 position: absolute;
 left: -150px;
 }

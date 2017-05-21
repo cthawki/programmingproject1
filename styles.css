@@ -88,13 +88,18 @@ td {
   text-align: center;
 }
 
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
 /*
 HEADER
 */
 
 div#header {
       width: 100%
-      position: absolute;
+      position: fixed;
       top: 0;
       left: 0;
       background-color: #990000;

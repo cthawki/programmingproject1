@@ -62,6 +62,24 @@ div#contact {
   margin: .1em .2em .2em .2em;
 }
 
+div#photo {
+  width: 400px;
+  height: 269px;
+  background-image: url("images/baseball.jpg");
+  position: absolute;
+  left; -400px;
+  top: 250px;
+}
+
+div#photo h2 {
+  font-family: arial, helvetica, sans-serif;
+  font-size: 2em;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  padding: 50px 0 0 150px;
+}
+
 /*
 MARGINS
 */

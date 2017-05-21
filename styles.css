@@ -67,7 +67,7 @@ div#photo {
   height: 269px;
   background-image: url("images/baseball.jpg");
   position: absolute;
-  left; -400px;
+  left: -500px;
   top: 250px;
 }
 

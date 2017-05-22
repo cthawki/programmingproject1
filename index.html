@@ -23,6 +23,9 @@
       $("#page3").show();
     }
   }
+    $("button#hideimg).on("click", function() {
+      $("images/baseball.jpg).hide();
+    });
   </script>
   </head>
   <body style="background-color:gray">
@@ -36,6 +39,7 @@
       <p><b><h1>ABOUT ME!</h1></b></p>
       <center>
         <img src="images/baseball.jpg">
+        <button id="hideimg">Hide me</button>
         <br>
         <p>My name is <b><span class="standout">Christopher Hawkins</span></b>, and I am 22 years old.</p>
         <p>I am from Pittsburgh, PA - residing in the Beechview neighborhood.</p>

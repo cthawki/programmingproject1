@@ -83,6 +83,26 @@
       <a href="http://www.twitter.com/vibeaneer"><img src="images/twitter.jpg" width="100" height="100"></a>
       <a href="http://www.instagram.com/hawkpgh"><img src="images/instagram.jpg" width="100" height="100"></a>
     </center>
-   </div>
+    <br>
+    <br>
+    <br>
+    <form action="send-email.php" method="post">
+      Name:
+      <br>
+      <input type="text" name="surname" size="25" maxlength="40">
+      <br><br>
+      What is your purpose of e-mailing?
+      <input type="radio" name="found-thru" value="Personal"
+             checked="checked"> Personal
+      <input type="radio" name="found-thru" value="School"> School
+      <input type="radio" name="found-thru" value="Other"> Other
+      <br><br>
+      Message:
+      <br>
+      <textarea name="message" rows="4" cols="30"></textarea>
+      <br><br>
+      <input type="submit" value="Send email message">
+    </form>
+    </div>
   </body>
 </html>

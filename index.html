@@ -23,9 +23,11 @@
       $("#page3").show();
     }
   }
-    $("button#hideimg).on("click", function() {
-      $("images/baseball.jpg).hide();
-    });
+    
+  $("button#change_font").on("click", function() {
+     $("p").addClass("diff");                      
+  });
+    
   </script>
   </head>
   <body style="background-color:gray">
@@ -39,13 +41,13 @@
       <p><b><h1>ABOUT ME!</h1></b></p>
       <center>
         <img src="images/baseball.jpg">
-        <button id="hideimg">Hide me</button>
         <br>
         <p>My name is <b><span class="standout">Christopher Hawkins</span></b>, and I am 22 years old.</p>
         <p>I am from Pittsburgh, PA - residing in the Beechview neighborhood.</p>
         <p>I am currently a <i>senior</i> at Point Park University as an Information Technology major.</p>
         <p>I am a huge fan of the <font color="yellow"><b>Pirates</b></font> and <font color="yellow"><b>Steelers</b></font>, and also follow the <font color="orange"><b>Miami Marlins.</b></font></p>
       </center>
+    <button id="change_font">CHANGE THE FONT</button>
     </div>
   <div id="page2" style="display:none;">
     <ul>

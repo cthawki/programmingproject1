@@ -62,6 +62,14 @@ div#contact {
   margin: .1em .2em .2em .2em;
 }
 
+/*
+IMAGE
+*/
+
+img.wrap-around-the-right-side {
+  float: left;
+  margin: 0 .75em .5em 0;
+}
 
 /*
 MARGINS

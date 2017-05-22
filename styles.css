@@ -62,22 +62,11 @@ div#contact {
   margin: .1em .2em .2em .2em;
 }
 
-div#me {
-  width: 400px;
-  height:269px;
-  background-image: url("https://instagram.fphl2-1.fna.fbcdn.net/t51.2885-15/e35/17494760_441296579542872_8295810627364978688_n.jpg");
-  position: absolute;
-  left: -400px;
-  top: 250px;
-}
+/* IMAGE
+*/
 
-div#me  h2 {
-  font-family: arial, helvetica, sans-serif;
-  font-size: 2em;
-  font-weight: bold;
-  color: white;
-  text-align: center;
-  padding: 50px 0 0 150px;
+img {
+  display: none;
 }
 
 /*

@@ -23,14 +23,6 @@
       $("#page3").show();
     }
   }
-   $( "clickme" ).click(function() {
-     $( "#me" ).animate({
-       opacity: 0,
-       left: "+=50",
-       height: "toggle"
-     }, 5000, function() {
-    });
-  });
   </script>
   </head>
   <body style="background-color:gray">
@@ -43,11 +35,7 @@
   <div id="page1">
       <p><b><h1>ABOUT ME!</h1></b></p>
       <center>
-        <div id="clickme">
-          Hide me
-        </div>
-        <img id="me" src="images/baseball.jpg" alt="me" width="250" height="250"
-             style="position: relative; left: 10px;">
+        <img src="images/baseball.jpg">
         <br>
         <p>My name is <b><span class="standout">Christopher Hawkins</span></b>, and I am 22 years old.</p>
         <p>I am from Pittsburgh, PA - residing in the Beechview neighborhood.</p>

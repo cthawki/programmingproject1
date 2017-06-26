@@ -151,11 +151,11 @@ margin: 19px 20px 0 0;
     padding: 0;
 }
 .main-content{
-    width: 50%;
+    width: 35%;
     float: left;
 }
 .aside{
-    width: 50%;
+    width: 65%;
     float: left;
 }
 .wrapper, html, body{

@@ -78,8 +78,12 @@ $headers = 'From: '.$email_from."\r\n".
 @mail($email_to, $email_subject, $email_message, $headers);  
 ?>
 
- 
-Thank's for the e-mail.  I will try to reply to it as soon as possible.
+<center><font size="5">
+Thank's for the e-mail.  I will try to reply to it as soon as possible.<br>
+If I do not get back to you within 24 hours, there is a chance your e-mail did not go through.<br>
+Instead, please try contacting me directly or through the other contact methods listed on the site.<br>
+To return to the site, click <a href="cthawki.it.pointpark.edu">here.</a>
+</font></center>
  
 <?php
  

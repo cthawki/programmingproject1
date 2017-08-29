@@ -13,6 +13,7 @@
     $("#page1").hide();
     $("#page2").hide();
     $("#page3").hide();
+    $("#page4").hide();
 
     if (page === 1) {
       $("#page1").show();
@@ -22,6 +23,9 @@
     }
     else if (page === 3) {
       $("#page3").show();
+    }
+    else if (page === 4) {
+      $("#page4").show();
     }
   }
   </script>
@@ -35,6 +39,7 @@
     <a href="javascript:void(0)" onclick="showpage(1)">HOME</a> <b>|</b>
     <a href="javascript:void(0)" onclick="showpage(2)">CMPS 361</a> <b>|</b>
     <a href="javascript:void(0)" onclick="showpage(3)">CONTACT ME</a>
+    <a href="javascript:void(0)" onClick="showpage(4)">MULTIMEDIA WORK</a>
     </center>
     <br>
   <div id="page1">
@@ -109,5 +114,8 @@
       <a href="http://www.instagram.com/hawkpgh"><img src="images/instagram.jpg" width="100" height="100"></a>
     </center>
     </div>
+  <div id="page4" style="display:none;">
+    -multimedia work-
+  </div>
   </body>
 </html>

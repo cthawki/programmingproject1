@@ -1,28 +1,11 @@
-<?php
-$servername = "cthawki.it.pointpark.edu";
-$username = "cthawki";
-$password = "mystery55";
-$dbname = "HSD";
+<!DOCTYPE html>
+<html>
+<head>
+<title>Invoice</title>
+</head>
+<body>
 
-// Create connection
-$conn = new mysqli($cthawki.it.pointpark.edu, $cthawki, $mystery55, $HSD);
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} 
-
-$sql = "SELECT * FROM HSD.INVOICE;";
-$result = $conn->query($sql);
-
-if ($result->num_rows > 0) {
-    echo "<table><tr><th>ID</th><th>Name</th></tr>";
-    // output data of each row
-    while($row = $result->fetch_assoc()) {
-        echo "<tr><td>".$row["id"]."</td><td>".$row["firstname"]." ".$row["lastname"]."</td></tr>";
-    }
-    echo "</table>";
-} else {
-    echo "0 results";
-}
-$conn->close();
-?>
+Invoice Selector
+   
+</body>
+</html>

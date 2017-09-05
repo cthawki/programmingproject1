@@ -1,106 +1,36 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
-<link rel="stylesheet" href="jquery-mobile-theme/themes/theme1.min.css" />
-<link rel="stylesheet" href="jquery.mobile.icons.min.css" />
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
-<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-<script>
-$(document).ready(function(){
- $.getJSON('http://cthawki.it.pointpark.edu/orders.php', function(jrs) {
-	   var i;
-	   var out = "<div data-role=\"fieldcontain\">\
-	   <label for=\"selectinvoice\" class=\"select\">Choose Invoice:</label>\
-	   <select name=\"selectinvoice\" id=\"selectinvoice\">";
-	   out += "<option value=\"\"> </option>";
-	   for( i=0; i < jrs.length ; i++)
-	   {
-		  out += "<option value=\""+jrs[i].ordernum+"\">"+jrs[i].ordernum+"</option>";   
-	   }
-	   out += "</select></div>";
-           $('#wigSelect').empty();
-	   $('#wigSelect').append(out);
-	   $("#wigSelect").trigger("create");
-	   
-		 $('#selectinvoice').on('change',  function() {
-                   var getParams = "?invoice="+$('#selectinvoice').val()
-		   getParams =  'http://cthawki.it.pointpark.edu/jsonOrder.php'+getParams;
-//		   alert(getParams); 
-		  $.getJSON(getParams, function(jrs) {  		
-                     var theKeys = Object.keys(jrs[0]); 
-                     var out =   " <table data-role=\"table\" id=\"myTable\" data-mode=\"columntoggle\" class=\"ui-body-d ui-shadow table-stripe ui-responsive\" data-column-btn-theme=\"b\" data-column-btn-text=\"Columns to display\" data-column-popup-theme=\"b\"> ";
-		     var i;
-		     var row;
-		     row = "<thead><tr>";
-		     for( i =0; i < theKeys.length; i++)
-		     {
-		       row += "<th data-priority= \"3\">"+ theKeys[i] + "</th>";
-		     }
-		     out += row + "</tr></thead><tbody>";
-		     var j;
-		     row="";
-			  
-//
-		   
-		     for(i=0; i < jrs.length; i++)
-		     {			   		   		   
-			   row = "<tr>";
-			   for(j=0; j < theKeys.length; j++)
-			   {
-				   row += "<td>";
-				   row +=  jrs[i][theKeys[j]];
-				   row += "</td>";
-			   }
-		           row += "</tr>";
-			   out += row;		    
-		     }
-		     out += "</tbody></table>";
-		     $('#myTable').remove();
-		     $('#wigTable').empty();	
-		     $('#wigTable').append(out);
-		     $('#wigTable').trigger('create');
-	             $("#myTable").trigger("create");
-		   
-        });
-        });
-		
-      });
-  });
-</script>
-	
-<title>Invoice Selector</title>
-	
-</head>
-	
-<body>
-	
-<div data-role="page" data-theme="a" id='startpage'>
+<?php
+$mysqli = new mysqli("localhost", "cthawki", "mystery55", "HSD");
 
-  <div data-role="header" data-theme="a">
-    <h2>Invoice Selector</h2>    
-  </div>
+/* check connection */
+if ($mysqli->connect_errno) {
+    printf("Connect failed: %s\n", $mysqli->connect_error);
+    exit();
+}
 
-  <div data-role="main" class="ui-content" id="mainpage" data-theme="a" data-cache="false">
+/* Create table doesn't return a resultset */
+if ($mysqli->query("CREATE TEMPORARY TABLE myCity LIKE City") === TRUE) {
+    printf("Table myCity successfully created.\n");
+}
 
-    <div data-role="content" id="wigSelect" data-theme="a"> 
+/* Select queries return a resultset */
+if ($result = $mysqli->query("SELECT * FROM HSD.INVOICE;")) {
+    printf("Select returned %d rows.\n", $result->num_rows);
 
-    </div>
-  
-    <div data-role="content" class="ui-content" id="wigTable" data-theme="a">
- 
-    </div>  
+    /* free result set */
+    $result->close();
+}
 
-  </div>
+/* If we have to retrieve large amount of data we use MYSQLI_USE_RESULT */
+if ($result = $mysqli->query("SELECT * FROM HSD.INVOICE", MYSQLI_USE_RESULT)) {
 
-  <div data-role="footer" data-theme="a" id="theFooter">
-    
-  </div>
+    /* Note, that we can't execute any functions which interact with the
+       server until result set was closed. All calls will return an
+       'out of sync' error */
+    if (!$mysqli->query("SET @a:='this will not work'")) {
+        printf("Error: %s\n", $mysqli->error);
+    }
+    $result->close();
+}
 
-</div>
-
-</body>
-	
-</html>
+$mysqli->close();
+?>

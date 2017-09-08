@@ -81,7 +81,7 @@ $headers = 'From: '.$email_from."\r\n".
 <center><font size="5">
 <br><br><br><br><br>
 Thanks for the e-mail.  I will try to reply to it as soon as possible.<br><br>
- If I do not get back to you within <b>24 hours</b>, there is a chance your e-mail did not go through.<br><br>
+ If I do not get back to you within <b>24 hours</b>, there is a chance there was something else wrong with your form, or your e-mail simply did not go through.<br><br>
 Instead, please try e-mailing me manually or through the other contact methods listed on my site.<br><br>
 To return to the site, click <a href="/index.html">here</a>.
 </font></center>

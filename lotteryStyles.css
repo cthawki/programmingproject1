@@ -2,3 +2,7 @@ h1 {
     color: navy;
     margin-left: 20px;
 }
+
+div#header {
+    background-color: blue;
+}

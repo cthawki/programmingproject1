@@ -2,7 +2,7 @@
 <html>
 <head>
 	
-<title>Chris Hawkins Lottery Number Generator!</title>
+<title>LOTTERY TIME!</title>
 	
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,10 +16,12 @@
 
 <script>
 
+var p2Array = new Array();
 var dlArray = new Array();
 var bfArray = new Array();
 var cfArray = new Array();
 var pbArray = new Array();
+var p2Picks = new Array();
 var dlPicks = new Array();
 var bfPicks = new Array();
 var cfPicks = new Array();
@@ -32,6 +34,23 @@ function initArray(n,vals)
   {
 	vals[i] = 0;
   }
+}	
+
+function getPickTwo(p2Array)
+{
+    var n = 2;
+    var count=0;
+    var val = 0;
+    while ( count < 2)
+    	{
+    	  val = Math.floor(Math.random()*9)+1;
+    	  if( p2Array[val] == 0)
+    		  {
+    		     p2Array[val]= 1;
+    		     p2Picks[count] = val;
+    		     count++;
+    		  }
+    	}
 }	
 	
 function getDaily(dlArray)
@@ -106,10 +125,13 @@ $(document).ready(function() {
        $('#button').click(function()		
 		  {
 		   var val;
+	   initArray(9, p2Array);
 	   initArray(9, dlArray);
 	   initArray(9, bfArray);
     	   initArray(43, cfArray);
     	   initArray(59, pbArray);
+	   getPickTwo(p2array);
+	   p2Picks.sort(function(a,b){return a - b});
 	   getDaily(dlArray);
 	   dlPicks.sort(function(a,b){return a - b});
 	   getBigFour(bfArray);
@@ -119,6 +141,7 @@ $(document).ready(function() {
 	   getPowerBall(pbArray);
     	   pbPicks.sort(function(a,b){return a - b});
     	   val = Math.floor(Math.random()*34)+1;
+	       $('#PickTwo').val(p2Picks[0]+"-"+p2Picks[1]);
 	       $('#Daily').val(dlPicks[0]+"-"+dlPicks[1]+"-"+
 			       dlPicks[2]);
 	       $('#BigFour').val(bfPicks[0]+"-"+bfPicks[1]+"-"+
@@ -140,6 +163,11 @@ $(document).ready(function() {
  <div data-role="content">
    <p align="center">Click on the compute button and your numbers will be randomly generated!</p>
   <form action="mobile2/lotto/GET" name="getTheNumbers" id="getTheNumbers">
+
+   <div data-role="fieldcontain">	
+	  <label for="PickTwo">Pick Two</label>
+     <input maxlength="16" size="16" id="PickTwo" name="PickTwo" value="1-2"/>
+   </div> <!--  data-role -->	
 	  
    <div data-role="fieldcontain">	
 	  <label for="Daily">Daily</label>
@@ -162,7 +190,7 @@ $(document).ready(function() {
    </div> <!--  data role -->
 	  
   <div data-role="fieldcontain">	
-  <input type="button" name="button" id="button" value="Compute" >
+  <input type="button" name="button" id="button" value="COMPUTE" >
   </form> 
   </div><!--data role -->
  </div> <!-- /content -->

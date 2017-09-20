@@ -7,13 +7,7 @@ h1 {
     margin-left: 20px;
 }
 
-input {
-  background-repeat:repeat-x; 
-  border: 0px solid;
-  height:25px;
-}
-
-#powerball {
+#button {
   background-color: white;
   width:235px;
 }

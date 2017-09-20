@@ -16,6 +16,7 @@
 
 <script>
 
+var dlArray = new Array();
 var cfArray = new Array();
 var pbArray = new Array();
 var pbPicks = new Array();
@@ -29,7 +30,7 @@ function initArray(n,vals)
 	vals[i] = 0;
   }
 }
-function getDaily(cfArray)
+function getDaily(dlArray)
 {
     var n = 3;
     var count=0;
@@ -81,13 +82,18 @@ $(document).ready(function() {
        $('#button').click(function()		
 		  {
 		   var val;
+	   initArray(9, dlArray);
     	   initArray(43, cfArray);
     	   initArray(59, pbArray);
+	       
+	   getDaily(dlArray);
+	   pbPicks.sort(function(a,b){return a - b});
+	       
     	   getPowerBall(pbArray);
     	   pbPicks.sort(function(a,b){return a - b});
     	   val = Math.floor(Math.random()*34)+1;
     	   getCashFive(cfArray);
-    	   cfPicks.sort(function(a,b){return a - b}); 
+    	   cfPicks.sort(function(a,b){return a - b});
    		    $('#cashFive').val(cfPicks[0]+"-"+cfPicks[1]+"-"+
  			   cfPicks[2]+"-"+cfPicks[3]+"-"+cfPicks[4]);  	   
 			$('#powerBall').val(pbPicks[0]+"-"+pbPicks[1]+"-"+

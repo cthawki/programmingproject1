@@ -7,11 +7,6 @@ h1 {
     margin-left: 20px;
 }
 
-label {
-color: white;
-font-weight: bold;
-display: block;
-width: 150px;
-float: left;
+input {
+    background-color: white;
 }
-label:after { content: ": " }

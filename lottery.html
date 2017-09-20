@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-<title>Chris Hawkins' Lottery Generator!</title> 
-
+	
+<title>Chris Hawkins Lottery Number Generator!</title>
+	
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
+	
 <link rel="stylesheet" href="css/themes/theme1.css"/>
 <link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css"/>
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css"/> 
-
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css"/>
+	
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script> 
 <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>   
 
 <script>
-
-var dlArray = new Array();
+	
 var cfArray = new Array();
 var pbArray = new Array();
 var pbPicks = new Array();
@@ -30,22 +29,7 @@ function initArray(n,vals)
 	vals[i] = 0;
   }
 }
-function getDaily(dlArray)
-{
-    var n = 3;
-    var count=0;
-    var val = 0;
-    while ( count < 3)
-    	{
-    	  val = Math.floor(Math.random()*9)+1;
-    	  if( cfArray[val] == 0)
-    		  {
-    		     cfArray[val]= 1;
-    		     cfPicks[count] = val;
-    		     count++;
-    		  }
-    	}
-}
+	
 function getCashFive(cfArray)
 {
     var n = 5;
@@ -62,6 +46,7 @@ function getCashFive(cfArray)
     		  }
     	}
 }
+	
 function getPowerBall(pbArray)
 {
     var n = 5;
@@ -78,22 +63,18 @@ function getPowerBall(pbArray)
     		  }
     	}
 }
+	
 $(document).ready(function() {      
        $('#button').click(function()		
 		  {
 		   var val;
-	   initArray(9, dlArray);
     	   initArray(43, cfArray);
     	   initArray(59, pbArray);
-	       
-	   getDaily(dlArray);
-	   pbPicks.sort(function(a,b){return a - b});
-	       
     	   getPowerBall(pbArray);
     	   pbPicks.sort(function(a,b){return a - b});
     	   val = Math.floor(Math.random()*34)+1;
     	   getCashFive(cfArray);
-    	   cfPicks.sort(function(a,b){return a - b});
+    	   cfPicks.sort(function(a,b){return a - b}); 
    		    $('#cashFive').val(cfPicks[0]+"-"+cfPicks[1]+"-"+
  			   cfPicks[2]+"-"+cfPicks[3]+"-"+cfPicks[4]);  	   
 			$('#powerBall').val(pbPicks[0]+"-"+pbPicks[1]+"-"+
@@ -102,14 +83,14 @@ $(document).ready(function() {
  });
 </script>
 </head>
-
+	
 <body>
 <div data-role="page"  data-theme="b">
 	<div data-role="header">
-		<h1>Chris Hawkins' Lottery Generator!</h1>
+		<h1>Chris Hawkins Lottery Number Generator!</h1>
 	</div><!-- /header -->
  <div data-role="content">
-   <p align="center">This page generates all sorts of numbers for your lottery needs.</p>
+   <p align="center">This App generates a Cash Five and Power Ball Pick - Good Luck!</p>
    <form action="mobile2/lotto/GET" name="getTheNumbers" id="getTheNumbers">
    <div data-role="fieldcontain">	
 	  <label for="cashFive">Cash Five</label>
@@ -125,7 +106,7 @@ $(document).ready(function() {
   </div><!--data role -->
  </div> <!-- /content -->
  <div data-role="footer">
-	<h4>Chris Hawkins' Lottery Generator!</h4>	
+	<h4>THANK YOU FOR USING THE GENERATOR!</h4>	
  </div><!-- /footer -->
 </div><!-- /page -->
 </body>

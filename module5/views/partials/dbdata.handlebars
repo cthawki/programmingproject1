@@ -1,0 +1,19 @@
+<div class="container">
+	<div class="container">
+		<table class="table table-bordered table-striped">
+				<thead>
+					<tr>
+						<th>Product Number</th>
+						<th>Unit Price</th>
+						<th>Total</th>
+					</tr>
+				</thead>
+				<tbody>
+	{{#each partials.dbContext}}
+	    <tr><td>{{ProductNumber}}</td><td>{{UnitPrice}}</td><td>{{Total}}</td></tr>
+	{{/each}}
+</tbody>
+</table>
+		</div>
+	<small>Source: <a href="http://it.pointpark.edu">Technology Website at Point Park</a></small>
+</div>

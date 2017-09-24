@@ -1,0 +1,16 @@
+{
+  "name": "dbapp",
+  "version": "1.0.0",
+  "description": "Example Db Application",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "author": "me",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.3",
+    "express-handlebars": "^3.0.0",
+    "mysql": "^2.13.0"
+  }
+}

@@ -1,11 +1,150 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
+
 <head>
-<title>Hawkins, Christopher</title>
+  <title>Chris Hawkins</title>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script>
+
+function showpage(page) {
+  $("#page1").hide();
+	$("#page2").hide();
+	$("#page3").hide();
+	if (page === 1) {
+		$("#page1").show();
+	} else if (page === 2) {
+		$("#page2").show();
+	} else if (page === 3) {
+    $("#page3").show();
+  }
+};
+
+</script>
+
 </head>
+
 <body>
 
-n/a
-  
+  <ul>
+    <li><a href="javascript:void(0)" onclick="showpage(1)" id="home">Home</a></li>
+    <li><a href="javascript:void(0)" onclick="showpage(2)" id="portfolio">Portfolio</a></li>
+    <li><a href="javascript:void(0)" onclick="showpage(3)" id="contact">Contact Me</a></li>
+  </ul>
+
+
+<div id="page1">
+
+<div class="section1">
+  <h1><center>ABOUT ME</center></h1>
+  <p><i><h2>Hello world,</h2></i></p>
+  <p><center>My name is Christopher Hawkins.<br>
+    I am 23 years old from Pittsburgh, PA.<br>
+    I have a part-time job working for Landmark Event Staffing Services.<br>
+    I am currently a senior Information Technology major at Point Park.<br>
+    I studied Multimedia for two years before switching to I.T.<br>
+    I am set to graduate in the Spring of 2018.</center></p>
+    <br>
+<h2><i>Interests...</i></h2>
+- Sports (Mainly baseball and football)<br>
+- Gaming<br>
+- Front-end web development<br>
+- Multimedia (Writing/reporting, photo, video)
+    <br>
+  <p><center><img src="images/me3.jpg" alt="Playoff game team photo"></center></p>
+    <br>
+
+</div>
+
+<div class="section2">
+  <p><center><img src="images/me1.jpg" alt="My grandpa and I"></center></p>
+  <p><center><img src="images/me2.jpg" alt="Playoff game baseball"></center></p>
+</div>
+
+</div>
+
+
+
+<div id="page2" style="display: none;">
+
+<div class="section1">
+  <h1><center>INFORMATION TECHNOLOGY</center><h1>
+</div>
+
+<div class="section2">
+
+<font color="black">
+
+  <h1><center>MULTIMEDIA</center></h1>
+
+<h2><i>Video work</i></h2>
+
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OOAjwJ3wHew?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</center>
+
+<br>
+
+<h2><i>Writing/Reporting work</i></h2>
+
+<center>
+<a href="http://www.pointparknewsservice.com/2015/12/07/kennywood-boasts-regions-tallest-christmas-tree/" target="_blank">Kennywood Christmas</a> - Published by the Point Park news service.
+</center>
+
+</font>
+
+</div>
+
+</div>
+
+
+<div id="page3" style="display: none;">
+
+<div class="section1">
+
+<center><h1>CONTACT ME!</center>
+
+<center>
+
+Right now, the best way to contact me would be through e-mail.  If you need my phone number, please request it through e-mail as well.
+
+<br><br><br>
+
+  <table>
+    <tr>
+      <th><center>School</center></th>
+      <th><center>Personal</center></th>
+    </tr>
+    <tr>
+      <td><center>cthawki@pointpark.edu</center></td>
+      <td><center>warhawkins@gmail.com</center></td>
+    </tr>
+  </table>
+
+</center>
+
+</div>
+
+<div class="section2">
+
+<font color="black">
+
+<center><h1>TWITTER</h1></center>
+
+<center>
+<h2><a href="https://twitter.com/vibeaneer?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-screen-name="false" data-show-count="false">Follow @Vibeaneer</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script><i> Follow me on Twitter!</i></h2>
+
+  <a class="twitter-timeline" data-width="500" data-height="500" data-dnt="true" data-theme="dark" href="https://twitter.com/Vibeaneer?ref_src=twsrc%5Etfw">Tweets by Vibeaneer</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</center>
+
+</font>
+
+</div>
+
+</div>
+
 </body>
+
 </html>

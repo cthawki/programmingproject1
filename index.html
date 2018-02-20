@@ -9,12 +9,13 @@
   <meta charset="utf-8"/>
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
+  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <script>
 
 function showpage(page) {
-  $("#page1").hide();
+	$("#page1").hide();
 	$("#page2").hide();
 	$("#page3").hide();
 	if (page === 1) {
@@ -22,8 +23,8 @@ function showpage(page) {
 	} else if (page === 2) {
 		$("#page2").show();
 	} else if (page === 3) {
-    $("#page3").show();
-  }
+		$("#page3").show();
+	}
 };
 
 </script>
@@ -32,6 +33,10 @@ function showpage(page) {
 
 <style>
 
+h1 {
+	font-family: Lobster, Monospace;
+}
+	
 .section1 {
   background-color:#11181e;
 	width: 50%;

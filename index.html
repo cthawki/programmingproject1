@@ -1,0 +1,256 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+
+  <title>Chris Hawkins</title>
+
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
+  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script>
+
+function showpage(page) {
+	$("#page1").hide();
+	$("#page2").hide();
+	$("#page3").hide();
+	if (page === 1) {
+		$("#page1").show();
+	} else if (page === 2) {
+		$("#page2").show();
+	} else if (page === 3) {
+		$("#page3").show();
+	}
+};
+
+</script>
+
+</head>
+
+<style>
+
+h1 {
+	font-family: Lobster, Monospace;
+}
+
+h2 {
+	font-family: Lobster, Monospace;
+}
+
+.section1 {
+  background-color:#11181e;
+	width: 50%;
+	float: left;
+	height: 100%;
+  border-right: 1vw solid #F5E5D6;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 15px;
+}
+
+.section2 {
+	background-color: #f1c40f;
+	width: 50%;
+	float: left;
+	height: 100%;
+	margin: 0;
+	padding: 15px;
+  box-sizing: border-box;
+}
+
+/* Navigation Bar */
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #11181e;
+		border-top: 10px solid white;
+		border-left: 10px solid white;
+		border-right: 10px solid white;
+		border-bottom: 10px solid white;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+a:hover:not(.active) {
+    background-color: #f1c40f;
+}
+
+.active {
+background-color:#4CAF50;
+}
+
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+		color: black;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: #f1c40f;
+    color: black;
+}
+
+</style>
+
+<body>
+
+<div class="container-fluid">
+
+  <ul>
+    <li><a href="javascript:void(0)" onclick="showpage(1)" id="home">Home</a></li>
+    <li><a href="javascript:void(0)" onclick="showpage(2)" id="portfolio">Portfolio</a></li>
+    <li><a href="javascript:void(0)" onclick="showpage(3)" id="contact">Contact Me</a></li>
+  </ul>
+
+
+
+<div id="page1">
+
+<div class="section1">
+<h1 class="text-primary text-center">About Me</h1>
+
+<h2 class="text-primary"><i>Hello world,</i></h2>
+
+<p><center>My name is Christopher Hawkins.<br>
+I am 23 years old from Pittsburgh, PA.<br>
+I have a part-time job working for Landmark Event Staffing Services.<br>
+I am currently a senior Information Technology major at Point Park.<br>
+I studied Multimedia for two years before switching to I.T.<br>
+I am set to graduate in the Spring of 2018!</center></p>
+
+<br>
+
+<h2 class="text-primary"><i>Interests...</i></h2>
+
+- Sports (Mainly baseball and football)<br>
+- Gaming<br>
+- Front-end web development<br>
+- Multimedia (Writing/reporting, photo, video)
+
+<br>
+
+<p><center><img src="images/me3.jpg" alt="Playoff game team photo"></center></p>
+
+<br>
+
+</div>
+
+<div class="section2">
+
+  <p><center><img src="images/me1.jpg" alt="My grandpa and I"></center></p>
+
+  <p><center><img src="images/me2.jpg" alt="Playoff game baseball"></center></p>
+
+</div>
+
+</div>
+
+
+
+<div id="page2" style="display: none;">
+
+<div class="section1">
+  <h1 class="text-primary text-center">Information Technology<h1>
+
+</div>
+
+<div class="section2">
+  <h1 class="text-primary text-center text-bold">Multimedia</h1>
+
+<h2><i>Video work</i></h2>
+
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OOAjwJ3wHew?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</center>
+
+<br>
+
+<h2><i>Writing/Reporting work</i></h2>
+
+<center>
+<a href="http://www.pointparknewsservice.com/2015/12/07/kennywood-boasts-regions-tallest-christmas-tree/" target="_blank">Kennywood Christmas</a> - Published by the Point Park news service.
+</center>
+
+</div>
+
+</div>
+
+
+<div id="page3" style="display: none;">
+
+<div class="section1">
+
+<h1 class="text-primary text-center">Contact Me</h1>
+
+<center>
+
+Right now, the best way to contact me would be through e-mail or via Twitter.  If you need my phone number, please request it through e-mail as well.
+
+<br><br><br>
+
+  <table>
+    <tr>
+      <th><center>School</center></th>
+      <th><center>Personal</center></th>
+    </tr>
+    <tr>
+      <td><center>cthawki@pointpark.edu</center></td>
+      <td><center>warhawkins@gmail.com</center></td>
+    </tr>
+  </table>
+
+</center>
+
+</div>
+
+<div class="section2">
+
+<font color="black">
+
+<h1 class="text-primary text-center">Twitter</h1>
+
+<center>
+<h2>Follow me on Twitter! <a href="https://twitter.com/vibeaneer?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @vibeaneer</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></h2>
+
+<br>
+
+<a class="twitter-timeline" data-width="500" data-height="500" data-dnt="true" data-theme="dark" href="https://twitter.com/Vibeaneer?ref_src=twsrc%5Etfw">Tweets by Vibeaneer</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</center>
+
+</font>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+
+</html>

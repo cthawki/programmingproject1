@@ -17,6 +17,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="jquery-3.3.1.min.js"></script>
 
 </head>
 
@@ -30,25 +31,15 @@ h2 {
 	font-family: Lobster, Monospace;
 }
   
-.section1{
-	background-color:#11181e;
-	width:50%;
-	float:left;
-	height:100%;
+.collumn {
+  background-color:#11181e;
+  width:50%;
+  float:left;
+  height:100%;
   border-right: 1vw solid #F5E5D6;
   box-sizing: border-box;
   margin:0;
   padding: 15px;
-}
-
-.section2{
-	background-color:#f1c40f;
-	width:50%;
-	float:left;
-	height:100%;
-	margin:0;
-	padding: 15px;
-  box-sizing: border-box;
 }
 
 .videoWrapper {
@@ -136,6 +127,69 @@ function showpage(page) {
 	}
 };
 	
+	
+	
+	
+	
+	
+var currentTallest = 0;
+var currentRowStart = 0;
+var rowDivs = new Array();
+
+function setConformingHeight(el, newHeight) {
+ // set the height to something new, but remember the original height in case things change
+ el.data("originalHeight", (el.data("originalHeight") == undefined) ? (el.height()) : (el.data("originalHeight")));
+ el.height(newHeight);
+}
+
+function getOriginalHeight(el) {
+ // if the height has changed, send the originalHeight
+ return (el.data("originalHeight") == undefined) ? (el.height()) : (el.data("originalHeight"));
+}
+
+function columnConform() {
+
+ // find the tallest DIV in the row, and set the heights of all of the DIVs to match it.
+ $('div.column').each(function(index) {
+
+  if(currentRowStart != $(this).position().top) {
+
+   // we just came to a new row.  Set all the heights on the completed row
+   for(currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) setConformingHeight(rowDivs[currentDiv], currentTallest);
+
+   // set the variables for the new row
+   rowDivs.length = 0; // empty the array
+   currentRowStart = $(this).position().top;
+   currentTallest = getOriginalHeight($(this));
+   rowDivs.push($(this));
+
+  } else {
+
+   // another div on the current row.  Add it to the list and check if it's taller
+   rowDivs.push($(this));
+   currentTallest = (currentTallest < getOriginalHeight($(this))) ? (getOriginalHeight($(this))) : (currentTallest);
+
+  }
+  // do the last row
+  for(currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) setConformingHeight(rowDivs[currentDiv], currentTallest);
+
+ });
+
+}
+
+
+$(window).resize(function() {
+ columnConform();
+});
+
+$(document).ready(function() {
+ columnConform();
+});	
+	
+	
+	
+	
+	
 </script>
 	
 <body>
@@ -152,7 +206,7 @@ function showpage(page) {
 
 <div id="page1">
 
-<div class="section1">
+<div class="collumn">
 <h1 class="text-primary text-center">About Me</h1>
 
 <h2 class="text-primary"><i>Hello world,</i></h2>
@@ -185,7 +239,7 @@ I am set to graduate in the Spring of 2018!</center></p>
 
 </div>
 
-<div class="section2">
+<div class="collumn">
 
   <p><center><img src="images/me1.jpg" alt="My grandpa and I" style="max-width: 100%; height: auto;"></center></p>
 
@@ -199,7 +253,7 @@ I am set to graduate in the Spring of 2018!</center></p>
 
 <div id="page2" style="display: none;">
 
-<div class="section1">
+<div class="collumn">
   <h1 class="text-primary text-center">Information Technology</h1>
 
 <br>
@@ -217,7 +271,7 @@ I am set to graduate in the Spring of 2018!</center></p>
 
 </div>
 
-<div class="section2">
+<div class="collumn">
   <h1 class="text-primary text-center">Multimedia</h1>
 
 <h2 class="text-primary"><i>Writing/Reporting work</i></h2>
@@ -255,7 +309,7 @@ I am set to graduate in the Spring of 2018!</center></p>
 
 <div id="page3" style="display: none;">
 
-<div class="section1">
+<div class="collumn">
 
 <h1 class="text-primary text-center">Contact Me</h1>
 
@@ -280,7 +334,7 @@ Right now, the best way to contact me would be through e-mail or via Twitter.  I
 
 </div>
 
-<div class="section2">
+<div class="collumn">
 
 <h1 class="text-primary text-center">Social Media</h1>
 

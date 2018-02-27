@@ -21,26 +21,33 @@
 </head>
 
 <style>
- 
+
 h1 {
 	font-family: Lobster, Monospace;
 }
-
 h2 {
 	font-family: Lobster, Monospace;
 }
-  
-.collumn {
-  background-color:#11181e;
-  width:50%;
-  float:left;
-  height:100%;
+
+.section1{
+	background-color:#11181e;
+	width:50%;
+	float:left;
+	height:100%;
   border-right: 1vw solid #F5E5D6;
   box-sizing: border-box;
   margin:0;
   padding: 15px;
 }
-
+.section2{
+	background-color:#f1c40f;
+	width:50%;
+	float:left;
+	height:100%;
+	margin:0;
+	padding: 15px;
+  box-sizing: border-box;
+}
 .videoWrapper {
 	position: relative;
 	padding-bottom: 56.25%; /* 16:9 */
@@ -54,9 +61,7 @@ h2 {
 	width: 100%;
 	height: 100%;
 }
-
 /* Navigation Bar */
-
 ul {
     list-style-type: none;
     margin: 0;
@@ -68,11 +73,9 @@ ul {
 		border-right: 10px solid white;
 		border-bottom: 10px solid white;
 }
-
 li {
     float: left;
 }
-
 li a {
     display: block;
     color: white;
@@ -80,39 +83,32 @@ li a {
     padding: 14px 16px;
     text-decoration: none;
 }
-
 a:hover:not(.active) {
     background-color: #f1c40f;
 }
-
 .active {
 background-color:#4CAF50;
 }
-
-
 table {
     border-collapse: collapse;
     width: 100%;
 }
-
 th, td {
     text-align: left;
     padding: 8px;
 		color: black;
 }
-
 tr:nth-child(even){background-color: #f2f2f2}
-
 th {
     background-color: #f1c40f;
     color: black;
 }
-	
+
 </style>
 
-	
+
 <script>
-	
+
 function showpage(page) {
 	$("#page1").hide();
 	$("#page2").hide();
@@ -125,72 +121,27 @@ function showpage(page) {
 		$("#page3").show();
 	}
 };
-	
-	
-	
-	
-	
-	
-var currentTallest = 0;
-var currentRowStart = 0;
-var rowDivs = new Array();
 
-function setConformingHeight(el, newHeight) {
- // set the height to something new, but remember the original height in case things change
- el.data("originalHeight", (el.data("originalHeight") == undefined) ? (el.height()) : (el.data("originalHeight")));
- el.height(newHeight);
-}
-
-function getOriginalHeight(el) {
- // if the height has changed, send the originalHeight
- return (el.data("originalHeight") == undefined) ? (el.height()) : (el.data("originalHeight"));
-}
-
-function columnConform() {
-
- // find the tallest DIV in the row, and set the heights of all of the DIVs to match it.
- $('div.column').each(function(index) {
-
-  if(currentRowStart != $(this).position().top) {
-
-   // we just came to a new row.  Set all the heights on the completed row
-   for(currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) setConformingHeight(rowDivs[currentDiv], currentTallest);
-
-   // set the variables for the new row
-   rowDivs.length = 0; // empty the array
-   currentRowStart = $(this).position().top;
-   currentTallest = getOriginalHeight($(this));
-   rowDivs.push($(this));
-
-  } else {
-
-   // another div on the current row.  Add it to the list and check if it's taller
-   rowDivs.push($(this));
-   currentTallest = (currentTallest < getOriginalHeight($(this))) ? (getOriginalHeight($(this))) : (currentTallest);
-
-  }
-  // do the last row
-  for(currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) setConformingHeight(rowDivs[currentDiv], currentTallest);
-
- });
-
-}
-
-
-$(window).resize(function() {
- columnConform();
+$(window).load(function() {
+    var els = $('div.left, div.middle, div.right');
+    els.height(getTallestHeight(els));
 });
 
-$(document).ready(function() {
- columnConform();
-});	
-	
-	
-	
-	
-	
+function getTallestHeight(elements) {
+    var tallest = 0, height;
+
+    for(i; i < elements.length; i++) {
+        height = $(elements[i]).height();
+
+        if(height > tallest)
+            tallest = height;
+    }
+
+    return tallest;
+};
+
 </script>
-	
+
 <body>
 
 <div class="container-fluid">
@@ -205,7 +156,7 @@ $(document).ready(function() {
 
 <div id="page1">
 
-<div class="collumn">
+<div class="section1">
 <h1 class="text-primary text-center">About Me</h1>
 
 <h2 class="text-primary"><i>Hello world,</i></h2>
@@ -238,7 +189,7 @@ I am set to graduate in the Spring of 2018!</center></p>
 
 </div>
 
-<div class="collumn">
+<div class="section2">
 
   <p><center><img src="images/me1.jpg" alt="My grandpa and I" style="max-width: 100%; height: auto;"></center></p>
 
@@ -252,7 +203,7 @@ I am set to graduate in the Spring of 2018!</center></p>
 
 <div id="page2" style="display: none;">
 
-<div class="collumn">
+<div class="section1">
   <h1 class="text-primary text-center">Information Technology</h1>
 
 <br>
@@ -270,7 +221,7 @@ I am set to graduate in the Spring of 2018!</center></p>
 
 </div>
 
-<div class="collumn">
+<div class="section2">
   <h1 class="text-primary text-center">Multimedia</h1>
 
 <h2 class="text-primary"><i>Writing/Reporting work</i></h2>
@@ -308,7 +259,7 @@ I am set to graduate in the Spring of 2018!</center></p>
 
 <div id="page3" style="display: none;">
 
-<div class="collumn">
+<div class="section1">
 
 <h1 class="text-primary text-center">Contact Me</h1>
 
@@ -333,7 +284,7 @@ Right now, the best way to contact me would be through e-mail or via Twitter.  I
 
 </div>
 
-<div class="collumn">
+<div class="section2">
 
 <h1 class="text-primary text-center">Social Media</h1>
 

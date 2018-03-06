@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BurghProud</title>
+
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Monospace;
+    padding: 10px;
+    background: #f1f1f1;
+}
+
+/* Header/Blog Title */
+.header {
+  background-color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.header h1 {
+    font-size: 50px;
+}
+
+/* Style the top navigation bar */
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Create two unequal sections that floats next to each other */
+
+/* Left section */
+.section1 {
+    float: left;
+    width: 75%;
+}
+
+/* Right section */
+.section2 {
+    float: left;
+    width: 25%;
+    background-color: #f1f1f1;
+    padding-left: 20px;
+}
+
+/* Single column pages */
+.section3 {
+  width: 100%;
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+/* Add a card effect for articles */
+.card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 20px;
+}
+
+.homePic {
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+}
+
+.aboutMePic {
+  height: 250px;
+  width: 250px;
+  max-width: 100%;
+}
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media (max-width: 800px) {
+    .leftcolumn, .rightcolumn {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media (max-width: 400px) {
+    .topnav a {
+        float: none;
+        width: 100%;
+    }
+}
+</style>
+
+<script>
+
+function showpage(page) {
+	$("#page1").hide();
+	$("#page2").hide();
+	$("#page3").hide();
+	if (page === 1) {
+		$("#page1").show();
+	} else if (page === 2) {
+		$("#page2").show();
+	} else if (page === 3) {
+		$("#page3").show();
+	}
+};
+
+</script>
+
+</head>
+
+<body>
+
+<div class="header">
+  <img src="pictures/home.jpg" class="homePic"></img>
+</div>
+
+<div class="topnav">
+  <a href="javascript:void(0)" onclick="showpage(2)">Pirates</a>
+  <a href="javascript:void(0)" onclick="showpage(3)">Steelers</a>
+  <a href="javascript:void(0)" onclick="showpage(1)" style="float:right">Home</a>
+</div>
+
+<div class="row">
+  <div id="page1">
+    <div class="section1">
+      <div class="card">
+        <h2>Welcome!</h2>
+        <h5>Christopher Hawkins - March 5, 2018</h5>
+        <p>Welcome!  With the Pirates season right around the corner, I thought it was a great time to launch this site.  Here you will find coverage on my two favorite teams, the Pirates and Steelers.  Feel free to browse around using the navigation bar right above.</p>
+        <p>
+          <img src="pictures/schedule.jpg" alt="pirates schedule" style="max-width: 100%; height: auto;">
+        </p>
+      </div>
+    </div>
+
+  <div class="section2">
+    <div class="card">
+      <h2>About Me</h2>
+      <img src="pictures/me2.jpg" class="aboutMePic"></img>
+      <p>This website was created by Christopher Hawkins.</p>
+      <p>I created this sample website on March 5, 2018.</p>
+      <p>You can learn more about me <a target="_blank" href="http://cthawki.it.pointpark.edu">here</a>.</p>
+    </div>
+    <div class="card">
+      <h3>What's new?</h3>
+      <p><a href="#">RECENT POST #1</a></p>
+      <p><a href="#">RECENT POST #2</a></p>
+      <p><a href="#">RECENT POST #3</a></p>
+    </div>
+    <div class="card">
+      <h3>Follow Me</h3>
+      <p>Feel free to keep up with me on Social Media by clicking on the images below.</p>
+      <a href="https://www.twitter.com/vibeaneer" target="_blank">
+      <img src="pictures/twitter.jpg" alt="twitter logo" style="max-width: 100%; height: auto;">
+    </a>
+    <a href="https://www.instagram.com/hawkpgh" target="_blank">
+      <img src="pictures/instagram.jpg" alt="instagram logo" style="max-width: 100%; height: auto;">
+    </a>
+  </div>
+</div>
+</div>
+
+
+
+  <div id="page2" style="display: none;">
+    <div class="section3">
+      <div class="card">
+        <h2>Josh Bell - Can He Be The New Face of the Franchise?</h2>
+        <h5>Christopher Hawkins - March 6, 2018</h5>
+        <img src="pictures/bell.jpg" alt="josh bell"></img>
+        <p>paragraph 1</p>
+        <p>paragraph 2</p>
+        <p>paragraph 3</p>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="page3" style="display: none;">
+    <div class="section3">
+      <div class="card">
+        <h2>Le'Veon Bell - Is He Worth What He Wants?</h2>
+        <h5>Christopher Hawkins - March 6, 2018</h5>
+        <img src="pictures/leveon.jpg" alt="le'veon bell"></img>
+        <p>paragraph 1</p>
+        <p>paragraph 2</p>
+        <p>paragraph 3</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="footer">
+  <h2>Website created by Christopher Hawkins</h2>
+</div>
+
+</body>
+</html>

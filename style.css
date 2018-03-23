@@ -122,12 +122,14 @@ nav li {
 @media only screen and (max-width: 600px) {
   #main #main-col {
     float: none;
+    width: 100%;
   }
 }
 
 @media only screen and (max-width: 600px) {
   #main #secondary-col {
     float: none;
+    width: 100%;
   }
 }
 

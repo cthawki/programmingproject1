@@ -119,6 +119,18 @@ nav li {
   font-size: 30px;
 }
 
+@media only screen and (max-width: 600px) {
+  #main #main-col {
+    float: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #main #secondary-col {
+    float: none;
+  }
+}
+
 /* Photo Gallery */
 #photos {
   background-color: #60401f;

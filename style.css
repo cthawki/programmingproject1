@@ -120,14 +120,7 @@ nav li {
 }
 
 @media only screen and (max-width: 600px) {
-  #main #main-col {
-    float: none;
-    width: 100%;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  #main #secondary-col {
+  #main #main-col, #main #secondary-col {
     float: none;
     width: 100%;
   }
@@ -198,7 +191,6 @@ nav li {
 }
 
 /* Footer */
-
 footer {
   background-color: #60401f;
   font-size: 15px;
@@ -220,4 +212,17 @@ footer #contact a {
 footer #contact a:hover {
   color: black;
   font-weight: bold;
+}
+
+@media only screen and (max-width: 600px) {
+  footer #copyright, footer #contact {
+    float: none;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  footer #contact {
+    text-align: center;
+  }
 }

@@ -75,7 +75,7 @@ nav li {
 
 /* Showcase */
 #showcase {
-  background: url('showcase.jpg');
+  background: url('images/showcase.jpg');
   background-size: cover;
   min-height: 400px;
   color: white;

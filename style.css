@@ -218,11 +218,6 @@ footer #contact a:hover {
   footer #copyright, footer #contact {
     float: none;
     width: 100%;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  footer #contact {
     text-align: center;
   }
 }

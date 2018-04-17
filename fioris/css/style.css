@@ -1,0 +1,222 @@
+body {
+  background: linear-gradient(to bottom, #ccad00 35%, #ffffff 65%);
+  font-family: Cuprum;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* Global */
+.container {
+  width: 85%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.active {
+  background-color: #ccad00;
+  color: black;
+  font-weight: bold;
+}
+
+.red {
+  color: red;
+  font-weight: bold;
+}
+
+.small {
+  float: left;
+  width: 33%;
+  text-align: center;
+}
+
+.large {
+  float: left;
+  width: 33%;
+  text-align: center;
+}
+
+.individual {
+  float: right;
+  width: 33%;
+  text-align: center;
+}
+
+.medium {
+  float: right;
+  width: 33%;
+  text-align: center;
+}
+
+.toppings {
+  text-align: center;
+}
+
+/* Header */
+header #motto {
+  width: 30%;
+  float: left;
+  padding: 5px;
+  font-family: Gaegu, Monospace;
+  text-align: center;
+}
+
+header #slogan {
+  transform: rotate(-10deg);
+  margin-top: 40px;
+  font-weight: bold;
+}
+
+header #logo {
+  width: 60%;
+  float: right;
+  padding: 5px;
+}
+
+header #logo #logo_main {
+  max-width: 100%;
+}
+
+/* Nav */
+nav {
+  background-color: black;
+  text-align: center;
+  font-size: 13px;
+  border: 2px solid white;
+}
+
+nav li {
+  list-style-type: none;
+  display: inline;
+}
+
+nav a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 5px;
+  padding: 15px;
+  transition: .5s;
+  margin: 5px;
+}
+
+nav a:hover {
+  background-color: #ccad00;
+  color: black;
+  font-weight: black;
+}
+
+/* Showcase */
+#showcase {
+  margin-top: 10px;
+  padding: 5px;
+  text-align: center;
+}
+
+/* Main */
+#main {
+  background: linear-gradient(to top, #ccad00 45%, #ffffff 65%);
+  margin-top: 10px;
+}
+
+#main h1 {
+  color: #ff9999;
+  font-weight: bold;
+}
+
+section #main_content {
+  float: left;
+  width: 55%;
+}
+
+section #side_content {
+  float: right;
+  width: 40%;
+}
+
+/* Footer */
+footer {
+  background-color: #ccad00;
+  padding-top: 25px;
+  letter-spacing: 2px;
+}
+
+footer #footer_left {
+  float: left;
+}
+
+footer #footer_right {
+  float: right;
+}
+
+#bottom_nav {
+  text-align: center;
+  margin-right: 30px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  display: inline;
+}
+
+a {
+  text-decoration: none;
+  padding: 10px;
+  font-size: 16px;
+  color: white;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: black;
+}
+
+/* Menu page */
+#main_menu {
+  background: linear-gradient(to top, #ccad00 45%, #ffffff 65%);
+  margin-top: 10px;
+}
+
+#description {
+  float: left;
+  width: 100%;
+}
+
+#small, #large, #individual {
+  letter-spacing: 1px;
+}
+
+#choices {
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+#calzones, #hoagies, #apps, #wings, #pastas_salads, #misc, #sauces {
+  text-align: center;
+  padding-top: 100px;
+}
+
+#menu_nav {
+  font-size: 25px;
+  color: black;
+  font-weight: bold;
+}
+
+#menu_nav:hover {
+  text-decoration: none;
+  color: red;
+}
+
+/* Location page */
+#main_map {
+  float: left;
+  text-align: center;
+}
+
+#new_map {
+  float: right;
+  text-align: center;
+}

@@ -16,18 +16,6 @@ body {
   color: red;
 }
 
-.white {
-  color: white;
-}
-
-.blue {
-  color: blue;
-}
-
-header {
-  color: purple;
-}
-
 .btn_roster {
   font-family: 'Source Code Pro', monospace;
   height: 35px;

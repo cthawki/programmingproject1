@@ -1,0 +1,56 @@
+body {
+  background-color: black;
+  color: white;
+  font-family: 'Port Lligat Slab', serif;
+  font-size: 20px;
+  text-align: center;
+}
+
+.container {
+  width: 95%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.red {
+  color: red;
+}
+
+.white {
+  color: white;
+}
+
+.blue {
+  color: blue;
+}
+
+header {
+  color: purple;
+}
+
+.btn_roster {
+  font-family: 'Source Code Pro', monospace;
+  height: 35px;
+  width: 250px;
+  margin: 10px;
+  border: none;
+}
+
+.btn_roster:hover {
+  background-color: black;
+  border: none;
+  color: white;
+}
+
+#left {
+  float: left;
+  width: 50%;
+}
+
+#starters_section, #relivers_section {
+  color: red;
+}
+
+#infield_section, #outfield_section {
+  color: blue;
+}

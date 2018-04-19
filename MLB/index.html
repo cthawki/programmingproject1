@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Random MLB Roster Generator</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Port+Lligat+Slab|Source+Code+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header>
+      <h1>RANDOM <span class="red">M</span><span class="white">L</span><span class="blue">B</span> ROSTER GENERATOR</h1>
+      <p><span class="white">This generator will compose a random roster of some of the top players at each position.</span></p>
+    </header>
+    <div class="container">
+      <div id="left">
+        <div id="starters_section">
+          <h1>Starting Pitchers:</h1>
+          <p id="showStarters"></p>
+          <button class="btn_roster" onclick="displayStarters()">Generate Starting Pitchers</button>
+        </div>
+        <div id="relivers_section">
+          <h1>Relievers:</h1>
+          <p id="showRelievers"></p>
+          <button class="btn_roster" onclick="displayRelievers()">Generate Relievers</button>
+        </div>
+      </div>
+      <div id="right">
+        <div id="infield_section">
+          <h1>Infielders:</h1>
+          <p id="showInfielders"></p>
+          <button class="btn_roster" onclick="displayInfielders()">Generate Infielders</button>
+        </div>
+        <div id="outfield_section">
+          <h1>Outfielders:</h1>
+          <p id="showOutfielders"></p>
+          <button class="btn_roster" onclick="displayOutfielders()">Generate Outfielders</button>
+        </div>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>

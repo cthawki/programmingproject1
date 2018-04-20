@@ -33,6 +33,12 @@ body {
   padding-bottom: 99999px;
 }
 
+.lightBlue {
+  color: #4d94ff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
 /*Header */
 header {
   background-color: #60401f;
@@ -189,6 +195,7 @@ nav li {
 	width: 100%;
 	height: 100%;
 }
+
 
 /* Footer */
 footer {

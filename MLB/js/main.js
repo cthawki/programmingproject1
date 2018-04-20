@@ -33,7 +33,7 @@ var randomCenter = center[Math.floor(Math.random() * center.length)];
 var randomRight = right[Math.floor(Math.random() * right.length)];
 
 // Create a list of relievers
-var reliever = ["Ken Giles", "Roberto Osuna", "Cody ALlen", "Corey Knebel", "Edwin Diaz"];
+var reliever = ["Ken Giles", "Roberto Osuna", "Cody Allen", "Corey Knebel", "Edwin Diaz"];
 var setup = ["Chad Green", "Raisel Iglesias", "Brad Hand", "Zach Britton", "Archie Bradley"];
 var closer = ["Kenley Jansen", "Felipe Vasquez", "Andrew Miller", "Craig Kimbrel", "Aroldis Chapman"];
 
